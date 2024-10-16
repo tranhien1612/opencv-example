@@ -48,18 +48,8 @@ The results you will see is
 ```
 Where ```547``` is the height, ```512``` is the width and ```3``` is the number of channels.
 
-### Viewing an image
-After we read in the image we can display this image again using c```v2.imshow```. This takes two arguments The window name and the numpy array.
-```
-import cv2
-
-image = cv2.imread('./images/tennis.jpg')
-cv2.imshow("tennis", image)
-cv2.waitKey(0)
-```
-Using ```cv2.waitKey(0)``` stops the dialog from closing before we get to see the image. So we can see the image in a dialog with the title we put in the first argument.
-
 ### Change values of pixels
+
 ```
 import cv2
 image = cv2.imread('./images/tennis.jpg')
@@ -72,6 +62,17 @@ for x in range(0, width//2):
 cv2.imshow("image", image)
 cv2.waitKey(0) 
 ```
+
+### Viewing an image
+After we read in the image we can display this image again using c```v2.imshow```. This takes two arguments The window name and the numpy array.
+```
+import cv2
+
+image = cv2.imread('./images/tennis.jpg')
+cv2.imshow("tennis", image)
+cv2.waitKey(0)
+```
+Using ```cv2.waitKey(0)``` stops the dialog from closing before we get to see the image. So we can see the image in a dialog with the title we put in the first argument.
 
 ### Changing the color space
 You can change the color space of an image quite easily. Lets see how.
@@ -203,6 +204,9 @@ rotated = cv2.warpAffine(small_image, M, (h, w)) # rotate image
 cv2.imshow("Rotated Image", rotated)
 cv2.waitKey(0)
 ```
+
+## Image Filtering
+Image filtering can be used for many purposes, such as blurring, sharpening or detecting edges of an image
 
 ### Smoothing and Blurring
 When we are dealing with images at some points the images will be crisper and sharper which we need to smoothen or blur to get a clean image, or sometimes the image will be with a really bad edge which also we need to smooth it down to make the image usable.
@@ -346,7 +350,7 @@ cv2.destroyAllWindows()
 
 ### Edge Detection
 
-The detection of edges in an image enables us to identify the objects that are present. So, it is a significant use case in computer vision. The edges are formed by a significant variation in the adjacent pixel intensities of an image. Two popular edge detection algorithms are - Sobel filter and the Canny filter
+The detection of edges in an image enables us to identify the objects that are present. So, it is a significant use case in computer vision. The edges are formed by a significant variation in the adjacent pixel intensities of an image. Two popular edge detection algorithms are - `Sobel filter` and the `Canny filter`
 
 #### 1. Sobel Edge Detection
 The Sobel detector calculates the gradient of the pixels in an image. It identifies the rate at which the pixel intensity changes from light to dark and the direction of the change. This change will let us know the presence of an edge by judging how quickly or gradually the intensity changes. It contains two kernels, one for detecting horizontal edges and the other for vertical edges. 
