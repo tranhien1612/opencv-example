@@ -7,7 +7,7 @@
   pip install opencv-python
 ```
 
-## [Getting Started with OpenCV](https://www.kaggle.com/learn/computer-vision)
+## Getting Started with OpenCV
 
 ### Types of an image
 1. BINARY IMAGE– The binary image as its name suggests, contain only two pixel elements i.e 0 & 1,where 0 refers to black and 1 refers to white. This image is also known as Monochrome.
