@@ -59,6 +59,20 @@ cv2.waitKey(0)
 ```
 Using ```cv2.waitKey(0)``` stops the dialog from closing before we get to see the image. So we can see the image in a dialog with the title we put in the first argument.
 
+### Change values of pixels
+```
+import cv2
+image = cv2.imread('./images/tennis.jpg')
+height, width, channels = image.shape
+
+for x in range(0, width//2):
+    for y in range(0, height//2):
+        image[y, x] = [0, 0, 0]
+
+cv2.imshow("image", image)
+cv2.waitKey(0) 
+```
+
 ### Changing the color space
 You can change the color space of an image quite easily. Lets see how.
 
