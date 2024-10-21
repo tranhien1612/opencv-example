@@ -95,6 +95,11 @@ gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 cv2.imshow("tennis", gray_image)
 cv2.waitKey(0)
 ```
+
+The HSV color space separates color information (hue) from saturation and value. This makes it easier to detect and classify colors in images since hue focuses solely on the color without being influenced by saturation and brightness.
+
+Adjusting colors in the HSV space is often more intuitive. You can easily change saturation to enhance colors without worrying about brightness or the basic hue.
+ 
 ### Resizing images
 Lets see how we can resize image. To do this we need to run the ```cv2.resize()``` function.
 ```
