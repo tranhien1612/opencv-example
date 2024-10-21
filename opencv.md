@@ -10,10 +10,15 @@
 ## Getting Started with OpenCV
 
 ### Types of an image
-1. BINARY IMAGE– The binary image as its name suggests, contain only two pixel elements i.e 0 & 1,where 0 refers to black and 1 refers to white. This image is also known as Monochrome.
-2. BLACK AND WHITE IMAGE– The image which consist of only black and white color is called BLACK AND WHITE IMAGE.
-3. 8 bit COLOR FORMAT– It is the most famous image format.It has 256 different shades of colors in it and commonly known as Grayscale Image. In this format, 0 stands for Black, and 255 stands for white, and 127 stands for gray.
-4. 16 bit COLOR FORMAT– It is a color image format. It has 65,536 different colors in it.It is also known as High Color Format. In this format the distribution of color is not as same as Grayscale image.
+1. Binary Images: black and white or 0 and 1 (1-bit image)
+![Binary](https://media.geeksforgeeks.org/wp-content/uploads/20240619180124/Binary-image.webp)
+
+2. Gray-Scale Images; contains 8bits/pixel information, 256 different dim levels
+![Binary](https://media.geeksforgeeks.org/wp-content/uploads/20240619180229/Greyscale-image.webp)
+
+4. Color Images: three-band monochrome image data (R, G, B)
+![Color](https://media.geeksforgeeks.org/wp-content/uploads/20240619180355/color-image.webp)
+   
 
 ### Reading in an image
 Working with opencv we need to read in our image. To do this we just called cv2.imread() function. It returns the image in a numpy array format.
