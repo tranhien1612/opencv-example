@@ -80,6 +80,10 @@ gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 cv2.imshow("dog", gray_image)
 cv2.waitKey(0)
 ```
+*Data Simplification*: Color images have three channels (red, green, blue), while grayscale has only one channel. This reduces data complexity and saves computational resources.
+
+*Focus on Image Structure*: Many image processing tasks, such as edge detection or segmentation, primarily rely on brightness. Converting to grayscale helps focus on structural features without the influence of color.
+
 #### From RGB to BGR
 Remember when we used matplotlib. The image showed in the color space GBR. Lets try to get the same results. Below we add the option ```cv2.COLOR_RGB2BGR```
 ```
