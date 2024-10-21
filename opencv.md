@@ -120,24 +120,7 @@ cv2.imwrite("test.jpg", small_image)
 ```
 So we called imwrite and named our file ```dogtest.png```. 
 
-### Thresholding
-This is an important part of working with images in Opencv. You can learn more about it here on wikipedia or here on opencv docs
-
-But right now let me show you what it does.
-```
-import cv2
-
-image = cv2.imread("./images/tennis.jpg")
-gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-small_image = cv2.resize(gray_image, (300, 300))
-ret, thresh_image = cv2.threshold(small_image, 127, 255, cv2.THRESH_BINARY) # thresholding
-cv2.imshow("tennis", thresh_image)
-cv2.waitKey(0)
-```
-In the above code. We did things we already showed you. We read the image; We turned it gray. Then we resized it. THEN lets get into thresholding
-
 ### Drawing rectangles
-
 Let see how we can draw rectangles on your image. To do this we use the cv2.rectangle function. An example is shown below
 ```
 cv2.rectangle(image, (50, 100), (100, 200), (0, 255, 0))
@@ -190,6 +173,22 @@ rotated = cv2.warpAffine(small_image, M, (h, w)) # rotate image
 cv2.imshow("Rotated Image", rotated)
 cv2.waitKey(0)
 ```
+
+### Thresholding
+This is an important part of working with images in Opencv. You can learn more about it here on wikipedia or here on opencv docs
+
+But right now let me show you what it does.
+```
+import cv2
+
+image = cv2.imread("./images/tennis.jpg")
+gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+small_image = cv2.resize(gray_image, (300, 300))
+ret, thresh_image = cv2.threshold(small_image, 127, 255, cv2.THRESH_BINARY) # thresholding
+cv2.imshow("tennis", thresh_image)
+cv2.waitKey(0)
+```
+In the above code. We did things we already showed you. We read the image; We turned it gray. Then we resized it. THEN lets get into thresholding
 
 ## Image Filtering
 Image filtering can be used for many purposes, such as blurring, sharpening or detecting edges of an image
