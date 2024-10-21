@@ -15,19 +15,16 @@
 3. 8 bit COLOR FORMAT– It is the most famous image format.It has 256 different shades of colors in it and commonly known as Grayscale Image. In this format, 0 stands for Black, and 255 stands for white, and 127 stands for gray.
 4. 16 bit COLOR FORMAT– It is a color image format. It has 65,536 different colors in it.It is also known as High Color Format. In this format the distribution of color is not as same as Grayscale image.
 
-
 ### Reading in an image
 Working with opencv we need to read in our image. To do this we just called cv2.imread() function. It returns the image in a numpy array format.
 ```
 image = cv2.imread('dog.png')
 ```
-
 So we have a simple image called dog.png. If we run print on the image we could see the results.
 ```
 image = cv2.imread('dog.png')
 print(image)
 ```
-
 A sample of what a numpy array looks lie is shown below.
 
 ### Getting image shape
@@ -36,7 +33,6 @@ We can get the image shape by calling image.shape. Where image is the image we r
 Let see this in action.
 ```
 import cv2
-
 image = cv2.imread('./images/tennis.jpg')
 print(image.shape)
 ```
@@ -47,7 +43,6 @@ The results you will see is
 Where ```547``` is the height, ```512``` is the width and ```3``` is the number of channels.
 
 ### Change values of pixels
-
 ```
 import cv2
 image = cv2.imread('./images/tennis.jpg')
@@ -60,7 +55,6 @@ for x in range(0, width//2):
 cv2.imshow("image", image)
 cv2.waitKey(0) 
 ```
-
 ### Viewing an image
 After we read in the image we can display this image again using c```v2.imshow```. This takes two arguments The window name and the numpy array.
 ```
@@ -71,7 +65,6 @@ cv2.imshow("tennis", image)
 cv2.waitKey(0)
 ```
 Using ```cv2.waitKey(0)``` stops the dialog from closing before we get to see the image. So we can see the image in a dialog with the title we put in the first argument.
-
 ### Changing the color space
 You can change the color space of an image quite easily. Lets see how.
 
@@ -82,20 +75,11 @@ gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 cv2.imshow("dog", gray_image)
 cv2.waitKey(0)
 ```
-
 #### From RGB to BGR
 Remember when we used matplotlib. The image showed in the color space GBR. Lets try to get the same results. Below we add the option ```cv2.COLOR_RGB2BGR```
 ```
 gray_image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 ```
-
-#### From BGR to RGB
-So we can always convert our matplot image using
-```
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-```
-Play with these options to see the different results you can get.
-
 #### Converting to HSV
 A color space to note is HSV. We can create comparisions between image with it using histograms. Lets convert our image to this
 ```
@@ -106,7 +90,6 @@ gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 cv2.imshow("tennis", gray_image)
 cv2.waitKey(0)
 ```
-
 ### Resizing images
 Lets see how we can resize image. To do this we need to run the ```cv2.resize()``` function.
 ```
